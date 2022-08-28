@@ -19,7 +19,7 @@ library(ggplot2)
 
 \# First clone the repository with git. If you have cloned it into
 
-\# ~/biodiversity_appsilon_test, first go to that directory, then use runApp().
+\# ~/biodiversity, first go to that directory, then use runApp().
 
 setwd("~/app")
 

@@ -1,0 +1,12 @@
+app <- ShinyDriver$new("../../")
+app$snapshotInit("mytest")
+
+app$snapshot()
+app$snapshot()
+app$snapshot()
+app$setInputs(country = "Poland")
+app$snapshot()
+app$snapshot()
+app$setInputs(search = "Yellow Iris")
+app$snapshot()
+app$snapshot()

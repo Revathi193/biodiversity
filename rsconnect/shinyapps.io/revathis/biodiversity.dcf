@@ -1,0 +1,11 @@
+name: biodiversity
+title:
+username:
+account: revathis
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6696674
+bundleId: 6139344
+url: https://revathis.shinyapps.io/biodiversity/
+when: 1658944552.79608
+lastSyncTime: 1658944552.79612

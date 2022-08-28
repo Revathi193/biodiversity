@@ -1,0 +1,166 @@
+{
+  "input": {
+    "country": "None",
+    "inputdata_cell_clicked": {
+
+    },
+    "inputdata_cells_selected": [
+
+    ],
+    "inputdata_columns_selected": null,
+    "inputdata_rows_all": null,
+    "inputdata_rows_current": null,
+    "inputdata_rows_selected": null,
+    "inputdata_search": "",
+    "inputdata_state": null,
+    "search": "",
+    "sidebarCollapsed": false,
+    "sidebarItemExpanded": null
+  },
+  "output": {
+    "country": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" id=\"country-label\" for=\"country\">\n    <div style=\"font-size:14px\">Select a Country<\/div>\n  <\/label>\n  <div>\n    <select id=\"country\"><option value=\"None\" selected>None<\/option>\n<option value=\"Poland\">Poland<\/option>\n<option value=\"The Netherlands\">The Netherlands<\/option><\/select>\n    <script type=\"application/json\" data-for=\"country\" data-nonempty=\"\">{\"plugins\":[\"selectize-plugin-a11y\"]}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.12.4",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": [
+            "js/selectize.min.js",
+            "accessibility/js/selectize-plugin-a11y.min.js"
+          ],
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "inputdata": {
+      "x": {
+        "filter": "none",
+        "vertical": false,
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th>id<\/th>\n      <th>occurrenceID<\/th>\n      <th>catalogNumber<\/th>\n      <th>basisOfRecord<\/th>\n      <th>collectionCode<\/th>\n      <th>scientificName<\/th>\n      <th>taxonRank<\/th>\n      <th>kingdom<\/th>\n      <th>family<\/th>\n      <th>higherClassification<\/th>\n      <th>vernacularName<\/th>\n      <th>previousIdentifications<\/th>\n      <th>individualCount<\/th>\n      <th>lifeStage<\/th>\n      <th>sex<\/th>\n      <th>longitudeDecimal<\/th>\n      <th>latitudeDecimal<\/th>\n      <th>geodeticDatum<\/th>\n      <th>dataGeneralizations<\/th>\n      <th>coordinateUncertaintyInMeters<\/th>\n      <th>continent<\/th>\n      <th>country<\/th>\n      <th>countryCode<\/th>\n      <th>stateProvince<\/th>\n      <th>locality<\/th>\n      <th>habitat<\/th>\n      <th>recordedBy<\/th>\n      <th>eventID<\/th>\n      <th>eventDate<\/th>\n      <th>eventTime<\/th>\n      <th>samplingProtocol<\/th>\n      <th>behavior<\/th>\n      <th>associatedTaxa<\/th>\n      <th>references<\/th>\n      <th>rightsHolder<\/th>\n      <th>license<\/th>\n      <th>modified<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "pageLength": 20,
+          "columnDefs": [
+            {
+              "className": "dt-right",
+              "targets": [
+                12,
+                15,
+                16,
+                19,
+                27
+              ]
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "lengthMenu": [
+            10,
+            20,
+            25,
+            50,
+            100
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core",
+          "version": "1.11.3",
+          "src": {
+            "href": "dt-core-1.11.3"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "search-search": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" id=\"search-label\" for=\"search\">\n    <div style=\"font-size:14px\">Search species by Vernacular Name/Scientific Name<\/div>\n  <\/label>\n  <div>\n    <select id=\"search\" class=\"form-control\"><option value=\"\" selected>Search Bar<\/option>\n<option value=\"None\">None<\/option><\/select>\n    <script type=\"application/json\" data-for=\"search\" data-eval=\"[&quot;onDropdownOpen&quot;,&quot;onType&quot;]\">{\"create\":false,\"placeholder\":\"Search Me\",\"maxItems\":\"1\",\"onDropdownOpen\":\"function($dropdown) {if (!this.lastQuery.length) {this.close(); this.settings.openOnFocus = false;}}\",\"onType\":\"function (str) {if (str === \\\"\\\") {this.close();}}\",\"plugins\":[\"selectize-plugin-a11y\"]}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.12.4",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": [
+            "js/selectize.min.js",
+            "accessibility/js/selectize-plugin-a11y.min.js"
+          ],
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    }
+  },
+  "export": {
+
+  }
+}
